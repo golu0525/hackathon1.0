@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Panel</title>
+    <link rel="stylesheet" href="adminstyle.css">
+  </head>
+  <body>
+    <header>
+      <h1>Admin panel</h1>
+      <h2>Welcome AICTE</h2>
+    </header>
+    <div class="w3-container">
+
+
+  <div class="w3-row">
+    <a href="javascript:void(0)" onclick="openCity(event, 'initiative');">
+      <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Initiative</div>
+    </a>
+    <a href="javascript:void(0)" onclick="openCity(event, 'scheme');">
+      <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Schemes</div>
+    </a>
+    <a href="javascript:void(0)" onclick="openCity(event, 'news');">
+      <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">News</div>
+    </a>
+  </div>
+
+  <div id="initiative" class="w3-container city">
+    <h2>Add New Initiative</h2>
+    <p></p>
+    <form class="" action="#" method="post">
+      New Initiative Heading <input type="text" class="w3-input w3-border w3-round" name="head-init" value="">
+      <hr>
+      Brief <input type="text" class="w3-input w3-border w3-round" name="brief" value="">
+      <hr>
+      Image Upload <input type="file" name="img-upld" value="">
+      <hr>
+      Any Link <input type="text" class="w3-input w3-border w3-round" name="link" value="">
+      <hr>
+      Description <textarea rows="4" class="w3-input w3-border w3-round" cols="50" name="comment" form="usrform">
+Enter text here...</textarea>h
+<hr>
+<div class="w3-bar">
+<button type="submit" class="w3-button w3-left w3-blue">Add</button>
+<button type="reset" class="w3-button w3-right w3-green">Reset</button>
+</div>
+    </form>
+  </div>
+
+  <div id="scheme" class="w3-container city" style="display:none">
+    <h2>Add New Scheme</h2>
+    <p></p>
+    <form class="" action="#" method="post">
+      Goal <input type="text" class="w3-input w3-border w3-round" name="head-init" value="">
+      <hr>
+      Brief <input type="text" class="w3-input w3-border w3-round" name="brief" value="">
+      <hr>
+      Image Upload <input type="file" name="img-upld" value="">
+      <hr>
+      Any Link <input type="text" class="w3-input w3-border w3-round" name="link" value="">
+      <hr>
+      Main Objectives <textarea rows="4" class="w3-input w3-border w3-round" cols="50" name="comment" form="usrform">
+  Enter text here...</textarea>
+      <hr>
+    Any Message  <input type="text" class="w3-input w3-border w3-round" name="msg" value="">
+    <hr>
+    <div class="w3-bar">
+ <button type="submit" class="w3-button w3-left w3-blue">Add</button>
+ <button type="reset" class="w3-button w3-right w3-green">Reset</button>
+</div>
+
+
+    </form>
+  </div>
+
+  <div id="news" class="w3-container city" style="display:none">
+    <h2>Add New News</h2>
+    <p></p>
+    <form class="" action="#" method="post">
+       News Heading <input type="text" class="w3-input w3-border w3-round" name="head-init" value="">
+      <hr>
+      Brief <input type="text" class="w3-input w3-border w3-round" name="brief" value="">
+      <hr>
+      Image Upload <input type="file" name="img-upld" value="">
+      <hr>
+      Any Link <input type="text" class="w3-input w3-border w3-round" name="link" value="">
+      <hr>
+      Description <textarea rows="4" class="w3-input w3-border w3-round" cols="50" name="comment" form="usrform">
+  Enter text here...</textarea>
+  <hr>
+  <div class="w3-bar">
+<button type="submit" class="w3-button w3-left w3-blue">Add</button>
+<button type="reset" class="w3-button w3-right w3-green">Reset</button>
+</div>
+
+    </form>
+  </div>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("city");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-border-red", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-border-red";
+}
+</script>
+
+  </body>
+</html>
